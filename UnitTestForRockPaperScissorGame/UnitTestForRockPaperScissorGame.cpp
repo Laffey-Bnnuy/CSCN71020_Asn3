@@ -2,7 +2,7 @@
 #include "pch.h"
 #include "CppUnitTest.h"
 #include <string.h>
-#define MAX_STRING_SIZE 7
+#define MAX_STRING_SIZE 8
 extern "C" void Game(char*, char*, char*);
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
