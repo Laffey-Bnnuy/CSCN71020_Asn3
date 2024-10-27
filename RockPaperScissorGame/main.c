@@ -14,4 +14,14 @@ void Game(char* Input1, char* Input2, char* Result) {
 			strncpy(Result, "Player1", STRING_MAX_SIZE);
 		else strncpy(Result, "Player2", STRING_MAX_SIZE);
 	}
+	else if (Input1 == "Scissor") {
+		if (Input2 == "Paper")
+			strncpy(Result, "Player1", STRING_MAX_SIZE);
+		else strncpy(Result, "Player2", STRING_MAX_SIZE);
+	}
+	else if (Input1 == "Paper") {
+		if (Input2 == "Rock")
+			strncpy(Result, "Player1", STRING_MAX_SIZE);
+		else strncpy(Result, "Player2", STRING_MAX_SIZE);
+	}
 }
