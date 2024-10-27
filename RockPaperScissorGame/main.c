@@ -6,5 +6,7 @@ int main(void) {
 	return 0;
 }
 void Game(char* Input1, char* Input2, char* Result) {
-	strncpy(Result, Input1, 7);
+	if (Input1 == Input2) {
+		strncpy(Result, "Draw", 7);
+	}
 }
