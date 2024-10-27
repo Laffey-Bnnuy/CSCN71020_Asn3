@@ -9,4 +9,8 @@ void Game(char* Input1, char* Input2, char* Result) {
 	if (Input1 == Input2) {
 		strncpy(Result, "Draw", 7);
 	}
+	else if (Input1 == "Rock") {
+		if (Input2 =="Scissor")
+			strncpy(Result, "Player1", 7);
+	}
 }
