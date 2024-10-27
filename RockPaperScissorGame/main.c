@@ -1,11 +1,18 @@
 #include "main.h"
 #define STRING_MAX_SIZE 8
 int main(void) {
-	char Result[STRING_MAX_SIZE] = "";
-	Game("Rock", "Scissor", Result);
 	return 0;
 }
-void Game(char* Input1, char* Input2, char* Result) {
+bool Game(char* Input1, char* Input2, char* Result) {
+
+	char StringCase[3][STRING_MAX_SIZE] = { "Rock", "Paper","Scissor" };
+	for (int i = 0; i < 3; i++) {
+		if (Input1 != StringCase[i] || Input2 != StringCase[i]) {
+			strncpy(Result, "Invalid", STRING_MAX_SIZE);
+			return false;
+		}
+	}
+
 	if (Input1 == Input2) {
 		strncpy(Result, "Draw", STRING_MAX_SIZE);
 	}
@@ -24,4 +31,5 @@ void Game(char* Input1, char* Input2, char* Result) {
 			strncpy(Result, "Player1", STRING_MAX_SIZE);
 		else strncpy(Result, "Player2", STRING_MAX_SIZE);
 	}
+	return true;
 }
